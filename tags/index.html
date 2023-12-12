@@ -3,7 +3,7 @@
 <html lang="zh-CN">
 <head>
     <meta charset="utf-8" />
-    <title>tags | 周洛薇的博客</title>
+    <title>tags | 周洛薇の博客</title>
     <meta name="author" content="周洛薇" />
     <meta name="description" content="记录周洛薇生活、Java和Go学习笔记" />
     <meta name="keywords" content="生活,撸猫,python,Go,Java,数据分析,Web开发,SpringBoot,SSM框架" />
@@ -42,6 +42,21 @@
 
 <link rel="stylesheet" href="/css/main.css" />
 
+    <canvas
+    id="fireworks"
+    style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; pointer-events: none; z-index: 32767"
+    ></canvas>
+    <script src="https://cdn.staticfile.org/animejs/3.2.1/anime.min.js"></script>
+    <script src="/js/fireworks.min.js"></script>
+    <canvas
+    id="background"
+    style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; pointer-events: none; z-index: -1"
+    ></canvas>
+    <script src="/js/background.min.js"></script>
+    <div id="cursor"></div>
+    <link rel="stylesheet" href="/css/cursor.min.css" />
+    <script src="/js/cursor.min.js"></script>
+
 <meta name="generator" content="Hexo 7.0.0"></head>
 <body>
     <div id="layout">
@@ -57,7 +72,7 @@
         <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
     <nav id="desktop-menu">
         <a class="title" href="/">
-            <span>周洛薇的博客</span>
+            <span>周洛薇の博客</span>
         </a>
         
         <a href="/">
@@ -89,7 +104,7 @@
     <nav id="mobile-menu">
         <div class="title" @click="showMenuItems = !showMenuItems">
             <i class="fa-solid fa-bars fa-fw"></i>
-            <span>&emsp;周洛薇的博客</span>
+            <span>&emsp;周洛薇の博客</span>
         </div>
         <transition name="slide">
             <div class="items" v-show="showMenuItems">
@@ -179,7 +194,7 @@
     <div id="footer-wrap">
         <div>
             &copy;
-            2022 - 2023 周洛薇的博客
+            2022 - 2023 周洛薇の博客
             <span id="footer-icon">
                 <i class="fa-solid fa-font-awesome fa-fw"></i>
             </span>
