@@ -64,7 +64,7 @@
                 <div id="loading-circle">
                     <h2>LOADING</h2>
                     <p>加载过慢请开启缓存 浏览器默认开启</p>
-                    <img src="/images/loading.gif" />
+                    <img src="https://blog-zlw.oss-cn-beijing.aliyuncs.com/img/loading.gif" />
                 </div>
             </div>
         </transition>
@@ -196,7 +196,7 @@
 </tr>
 <tr>
 <td>邮箱</td>
-<td><a href="mailto:&#122;&#104;&#111;&#x75;&#x6c;&#117;&#x6f;&#x77;&#101;&#105;&#x37;&#x37;&#x36;&#x31;&#x34;&#x31;&#64;&#103;&#x6d;&#x61;&#105;&#108;&#46;&#x63;&#x6f;&#x6d;">&#122;&#104;&#111;&#x75;&#x6c;&#117;&#x6f;&#x77;&#101;&#105;&#x37;&#x37;&#x36;&#x31;&#x34;&#x31;&#64;&#103;&#x6d;&#x61;&#105;&#108;&#46;&#x63;&#x6f;&#x6d;</a></td>
+<td><a href="mailto:&#x7a;&#x68;&#111;&#117;&#108;&#117;&#x6f;&#119;&#101;&#x69;&#x37;&#x37;&#x36;&#49;&#x34;&#49;&#64;&#x67;&#109;&#97;&#105;&#108;&#46;&#99;&#x6f;&#109;">&#x7a;&#x68;&#111;&#117;&#108;&#117;&#x6f;&#119;&#101;&#x69;&#x37;&#x37;&#x36;&#49;&#x34;&#49;&#64;&#x67;&#109;&#97;&#105;&#108;&#46;&#99;&#x6f;&#109;</a></td>
 </tr>
 <tr>
 <td>github</td>
@@ -242,6 +242,27 @@
         </div>
         
     </div>
+    <div>
+        <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+        <script>
+            var now = new Date(); 
+            function createtime() { 
+                var grt= new Date("12/12/2023 00:00:00");//在此处修改你的建站时间
+                now.setTime(now.getTime()+250); 
+                days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+                hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+                if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+                mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+                seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+                snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+                document.getElementById("timeDate").innerHTML = "已运行 "+dnum+" 天 "; 
+                document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+            } 
+        setInterval("createtime()",250);
+        </script>
+        </div>
+        
+        
 </footer>
 
         </div>
@@ -278,5 +299,12 @@
 
 
     
+    <script type="text/javascript">
+    var OriginTitile=document.title,st;
+	document.addEventListener("visibilitychange",function(){
+        document.hidden?(document.title="o(இ௰இ)怎么就走了！",clearTimeout(st)):(document.title="☆*o(≧▽≦)o*☆欢迎回来！",st=setTimeout(function(){document.title=OriginTitile},3e3))
+    })
+    </script>
+
 </body>
 </html>
