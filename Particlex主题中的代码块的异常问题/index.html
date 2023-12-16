@@ -3,7 +3,7 @@
 <html lang="zh-CN">
 <head>
     <meta charset="utf-8" />
-    <title>Tags: JavaWeb | 周洛薇の小破窝</title>
+    <title>Particlex主题中的代码块的异常问题 | 周洛薇の小破窝</title>
     <meta name="author" content="周洛薇" />
     <meta name="description" content="周洛薇爱好小矮脚，小姐姐" />
     <meta name="keywords" content="生活" />
@@ -32,6 +32,10 @@
 
 
 <script src="/js/lib/preview.js"></script>
+
+
+
+
 
 
 
@@ -159,116 +163,65 @@
 </transition>
 
         <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
-            <div id="archives">
-    
-    <div class="categories-tags">
+            <div class="article">
+    <div>
+        <h1>Particlex主题中的代码块的异常问题</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/12/16
+        </span>
         
-        
-        
-        <span>
-            <a href="/tags/JavaWeb/" style="background: linear-gradient(120deg, #9abbf7 0%, #ffbbf4 100%)">
+        <span class="category">
+            <a href="/categories/%E5%89%8D%E7%AB%AF%E7%BD%91%E7%AB%99/">
                 <span class="icon">
-                    <i class="fa-solid fa-tags fa-fw"></i>
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
                 </span>
-                JavaWeb
+                前端网站
             </a>
         </span>
         
         
-        
-        
-        
-        <span>
-            <a href="/tags/JavaSE/" style="background: #ffa2c4">
-                <span class="icon">
-                    <i class="fa-solid fa-tags fa-fw"></i>
-                </span>
-                JavaSE
-            </a>
+        <span class="tags">
+            <span class="icon">
+                <i class="fa-solid fa-tags fa-fw"></i>
+            </span>
+            
+            
+            <span class="tag">
+                
+                <a href="/tags/hexo/" style="color: #03a9f4">hexo</a>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/Particlex/" style="color: #ff7d73">Particlex</a>
+            </span>
+            
         </span>
-        
-        
-        
-        <span>
-            <a href="/tags/hexo/" style="background: #00bcd4">
-                <span class="icon">
-                    <i class="fa-solid fa-tags fa-fw"></i>
-                </span>
-                hexo
-            </a>
-        </span>
-        
-        
-        
-        <span>
-            <a href="/tags/Particlex/" style="background: #00a596">
-                <span class="icon">
-                    <i class="fa-solid fa-tags fa-fw"></i>
-                </span>
-                Particlex
-            </a>
-        </span>
-        
-        
-        
-        <span>
-            <a href="/tags/MySQL/" style="background: #00bcd4">
-                <span class="icon">
-                    <i class="fa-solid fa-tags fa-fw"></i>
-                </span>
-                MySQL
-            </a>
-        </span>
-        
-        
-        
-        <span>
-            <a href="/tags/Linux/" style="background: #ffa2c4">
-                <span class="icon">
-                    <i class="fa-solid fa-tags fa-fw"></i>
-                </span>
-                Linux
-            </a>
-        </span>
-        
         
     </div>
     
-    <div class="timeline">
-        <div class="timeline-tail"></div>
-        <div class="timeline-content">
-            <div class="item-time">2023/12/15</div>
-            <a href="/Web%E5%BC%80%E5%8F%91/">
-                <h3>Web开发</h3>
-            </a>
-            <div class="info">
-                
-                <span class="category">
-                    <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
-                        <span class="icon">
-                            <i class="fa-solid fa-bookmark fa-fw"></i>
-                        </span>
-                        学习笔记
-                    </a>
-                </span>
-                
-                
-                <span class="tags">
-                    <span class="icon">
-                        <i class="fa-solid fa-tags fa-fw"></i>
-                    </span>
-                    
-                    
-                    <span class="tag">
-                        
-                        <a href="/tags/JavaWeb/" style="color: #03a9f4">JavaWeb</a>
-                    </span>
-                    
-                </span>
-                
-            </div>
-        </div>
+    <div class="content" v-pre>
+        <p>主题中的代码块的异常问题</p>
+<span id="more"></span>
+
+<h4 id="如果主题中出现了如下的异常"><a href="#如果主题中出现了如下的异常" class="headerlink" title="如果主题中出现了如下的异常"></a>如果主题中出现了如下的异常</h4><p><img src="https://blog-zlw.oss-cn-beijing.aliyuncs.com/img/fa3a1256ae3562e3bf31a8b18cc94f1c.png" alt="img"></p>
+<p>此问题的的出现是因为hexo的版本与主题不适配， 只需要降低hexo的版本就可以解决问题</p>
+<p>（顺带提一嘴我现在用的hexo的版本是6.3.0）</p>
+<h4 id="降低hexo版本之后代码块如下："><a href="#降低hexo版本之后代码块如下：" class="headerlink" title="降低hexo版本之后代码块如下："></a>降低hexo版本之后代码块如下：</h4><p><img src="https://blog-zlw.oss-cn-beijing.aliyuncs.com/img/image-20231216142458857.png" alt="image-20231216142458857"></p>
+<p>代码块异常问题就解决啦！！！</p>
+
     </div>
+    
+    
+    
+    
+    
+    
     
 </div>
 
@@ -321,6 +274,12 @@
         
     </div>
     <script src="/js/main.js"></script>
+    
+    
+
+
+
+
     
     <script type="text/javascript">
     var OriginTitile=document.title,st;
