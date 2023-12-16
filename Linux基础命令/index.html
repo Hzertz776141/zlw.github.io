@@ -193,7 +193,7 @@
             
             <span class="tag">
                 
-                <a href="/tags/Linux/" style="color: #00bcd4">Linux</a>
+                <a href="/tags/Linux/" style="color: #ffa2c4">Linux</a>
             </span>
             
         </span>
@@ -203,6 +203,7 @@
     <div class="content" v-pre>
         <p>Linux的基础指令</p>
 <span id="more"></span>
+
 <h2 id="Linux的目录结构"><a href="#Linux的目录结构" class="headerlink" title="Linux的目录结构"></a>Linux的目录结构</h2><p><img src="https://blog-zlw.oss-cn-beijing.aliyuncs.com/img/image-20231215145124329.png" alt="image-20231215145124329"></p>
 <ul>
 <li><code>/</code>，根目录是最顶级的目录了</li>
@@ -336,9 +337,9 @@
 <h2 id="管道符"><a href="#管道符" class="headerlink" title="管道符|"></a>管道符|</h2><p>写法：<code>|</code></p>
 <p>功能：将符号左边的结果，作为符号右边的输入</p>
 <p>示例：</p>
-<p><code>cat a.txt | grep itheima</code>，将cat a.txt的结果，作为grep命令的输入，用来过滤<code>itheima</code>关键字</p>
+<p><code>cat a.txt | grep zlw</code>，将cat a.txt的结果，作为grep命令的输入，用来过滤<code>zlw</code>关键字</p>
 <p>可以支持嵌套：</p>
-<pre><code>cat a.txt | grep itheima | grep itcast
+<pre><code>cat a.txt | grep zlw | grep itcast
 </code></pre>
 <h2 id="echo命令"><a href="#echo命令" class="headerlink" title="echo命令"></a>echo命令</h2><p>功能：输出内容</p>
 <p>语法：<code>echo 参数</code></p>
@@ -371,10 +372,8 @@
 <p><img src="https://blog-zlw.oss-cn-beijing.aliyuncs.com/img/image-20231215145216315.png" alt="image-20231215145216315"></p>
 <p><img src="https://blog-zlw.oss-cn-beijing.aliyuncs.com/img/image-20231215145234626.png" alt="image-20231215145234626"></p>
 <h3 id="底线命令快捷键"><a href="#底线命令快捷键" class="headerlink" title="底线命令快捷键"></a>底线命令快捷键</h3><p><img src="https://blog-zlw.oss-cn-beijing.aliyuncs.com/img/image-20231215145307400.png" alt="image-20231215145307400"></p>
-<h2 id="命令的选项"><a href="#命令的选项" class="headerlink" title="命令的选项"></a>命令的选项</h2><p>我们学习的一系列Linux命令，它们所拥有的选项都是非常多的。</p>
+<h2 id="命令的选项"><a href="#命令的选项" class="headerlink" title="命令的选项"></a>命令的选项</h2><p>学习的一系列Linux命令，它们所拥有的选项都是非常多的。</p>
 <p>比如，简单的ls命令就有：-a -A -b -c -C -d -D -f -F -g -G -h -H -i -I -k -l -L -m -n -N -o -p -q -Q -r-R -s -S -t -T -u -U -v -w -x -X -1等选项，可以发现选项是极其多的。</p>
-<p>课程中， 并不会将全部的选项都进行讲解，否则，一个ls命令就可能讲解2小时之久。</p>
-<p>课程中，会对常见的选项进行讲解， 足够满足绝大多数的学习、工作场景。</p>
 <h3 id="查看命令的帮助"><a href="#查看命令的帮助" class="headerlink" title="查看命令的帮助"></a>查看命令的帮助</h3><p>可以通过：<code>命令 --help</code>查看命令的帮助手册</p>
 <p><img src="https://blog-zlw.oss-cn-beijing.aliyuncs.com/img/image-20231215145346142.png" alt="image-20231215145346142"></p>
 <h3 id="查看命令的详细手册"><a href="#查看命令的详细手册" class="headerlink" title="查看命令的详细手册"></a>查看命令的详细手册</h3><p>可以通过：<code>man 命令</code>查看某命令的详细手册</p>
@@ -548,9 +547,7 @@ DNS1=&quot;192.168.88.2&quot;            # DNS1服务器，和网关一致即可
 <p><img src="https://blog-zlw.oss-cn-beijing.aliyuncs.com/img/20221027222021.png" alt="image20221027222021619"></p>
 <h2 id="sudo命令"><a href="#sudo命令" class="headerlink" title="sudo命令"></a>sudo命令</h2><p><img src="https://blog-zlw.oss-cn-beijing.aliyuncs.com/img/20221027222035.png" alt="image20221027222035337"></p>
 <p>比如：</p>
-<pre><code class="shell">itheima ALL=(ALL)       NOPASSWD: ALL
-</code></pre>
-<p>在visudo内配置如上内容，可以让itheima用户，无需密码直接使用<code>sudo</code></p>
+<p>在visudo内配置如上内容，可以让zl用户，无需密码直接使用<code>sudo</code></p>
 <h2 id="chmod命令"><a href="#chmod命令" class="headerlink" title="chmod命令"></a>chmod命令</h2><p>修改文件、文件夹权限</p>
 <p>语法：<code>chmod [-R] 权限 参数</code></p>
 <ul>
