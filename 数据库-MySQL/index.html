@@ -193,7 +193,7 @@
             
             <span class="tag">
                 
-                <a href="/tags/MySQL/" style="color: #ffa2c4">MySQL</a>
+                <a href="/tags/MySQL/" style="color: #00a596">MySQL</a>
             </span>
             
         </span>
@@ -415,15 +415,15 @@
 <h4 id="2-2-2-创建数据库"><a href="#2-2-2-创建数据库" class="headerlink" title="2.2.2 创建数据库"></a>2.2.2 创建数据库</h4><p><strong>语法：</strong></p>
 <pre><code class="mysql">create database [ if not exists ] 数据库名;
 </code></pre>
-<p>案例： 创建一个itcast数据库。</p>
-<pre><code class="mysql">create database itcast;
+<p>案例： 创建一个zlw数据库。</p>
+<pre><code class="mysql">create database zlw;
 </code></pre>
 <p>&#x3D;&#x3D;注意：在同一个数据库服务器中，不能创建两个名称相同的数据库，否则将会报错。&#x3D;&#x3D;</p>
 <ul>
 <li>可以使用if not exists来避免这个问题</li>
 </ul>
 <pre><code class="sql">-- 数据库不存在,则创建该数据库；如果存在则不创建
-create database if not extists itcast; 
+create database if not extists zlw; 
 </code></pre>
 <h4 id="2-2-3-使用数据库"><a href="#2-2-3-使用数据库" class="headerlink" title="2.2.3 使用数据库"></a>2.2.3 使用数据库</h4><p><strong>语法：</strong></p>
 <pre><code class="mysql">use 数据库名 ;
@@ -431,8 +431,8 @@ create database if not extists itcast;
 <blockquote>
 <p>要操作某一个数据库下的表时，就需要通过该指令，切换到对应的数据库下，否则不能操作。</p>
 </blockquote>
-<p>案例：切换到itcast数据</p>
-<pre><code class="mysql">use itcast;
+<p>案例：切换到zlw数据</p>
+<pre><code class="mysql">use zlw;
 </code></pre>
 <h4 id="2-2-4-删除数据库"><a href="#2-2-4-删除数据库" class="headerlink" title="2.2.4 删除数据库"></a>2.2.4 删除数据库</h4><p><strong>语法：</strong></p>
 <pre><code class="mysql">drop database [ if exists ] 数据库名 ;
@@ -441,8 +441,8 @@ create database if not extists itcast;
 <p>如果删除一个不存在的数据库，将会报错。</p>
 <p>可以加上参数 if exists ，如果数据库存在，再执行删除，否则不执行删除。</p>
 </blockquote>
-<p>案例：删除itcast数据库</p>
-<pre><code class="mysql">drop database if exists itcast; -- itcast数据库存在时删除
+<p>案例：删除zlw数据库</p>
+<pre><code class="mysql">drop database if exists zlw; -- zlw数据库存在时删除
 </code></pre>
 <blockquote>
 <p>说明：上述语法中的database，也可以替换成 schema</p>
