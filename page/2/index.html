@@ -3,7 +3,7 @@
 <html lang="zh-CN">
 <head>
     <meta charset="utf-8" />
-    <title>面向对象和String | 周洛薇の小破窝</title>
+    <title>周洛薇の小破窝</title>
     <meta name="author" content="周洛薇" />
     <meta name="description" content="周洛薇爱好小矮脚，小姐姐" />
     <meta name="keywords" content="生活" />
@@ -37,9 +37,7 @@
 
 
 
-
-
-
+<script src="/js/lib/home.js"></script>
 
 <link rel="stylesheet" href="/css/main.css" />
 
@@ -163,57 +161,136 @@
 </transition>
 
         <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
-            <div class="article">
-    <div>
-        <h1>面向对象和String</h1>
+            <div id="home-head">
+    <div id="home-background" ref="homeBackground" data-images="https://blog-zlw.oss-cn-beijing.aliyuncs.com/img/background.webp,https://blog-zlw.oss-cn-beijing.aliyuncs.com/img/background2.webp,https://blog-zlw.oss-cn-beijing.aliyuncs.com/img/background3.webp,https://blog-zlw.oss-cn-beijing.aliyuncs.com/img/background4.webp,https://blog-zlw.oss-cn-beijing.aliyuncs.com/img/background5.webp,https://blog-zlw.oss-cn-beijing.aliyuncs.com/img/background6.webp,https://blog-zlw.oss-cn-beijing.aliyuncs.com/img/background7.webp,https://blog-zlw.oss-cn-beijing.aliyuncs.com/img/background8.webp,https://blog-zlw.oss-cn-beijing.aliyuncs.com/img/background9.webp,https://blog-zlw.oss-cn-beijing.aliyuncs.com/img/background10.webp,https://blog-zlw.oss-cn-beijing.aliyuncs.com/img/background11.webp,https://blog-zlw.oss-cn-beijing.aliyuncs.com/img/background12.webp,https://blog-zlw.oss-cn-beijing.aliyuncs.com/img/background13.webp,https://blog-zlw.oss-cn-beijing.aliyuncs.com/img/background14.webp"></div>
+    <div id="home-info" @click="homeClick">
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="info">
+            <div class="wrap">
+                <h1>周洛薇の小破窝</h1>
+                <h3>记录周洛薇生活、成长记录</h3>
+                <h5>周洛薇爱好小矮脚，小姐姐</h5>
+            </div>
+        </span>
     </div>
-    <div class="info">
+</div>
+<div id="home-posts-wrap" true ref="homePostsWrap">
+    <div id="home-posts">
+        
+
+<div class="post">
+    <a href="/Hello-%EF%BC%8C%E6%88%91%E3%81%AE%E5%B0%8F%E7%A0%B4%E7%AA%9D/">
+        <h2 class="post-title">Hello ，我の小破窝</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="category">
+            <a href="/categories/%E6%97%A5%E5%B8%B8/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                日常
+            </a>
+        </span>
+        
         <span class="date">
             <span class="icon">
                 <i class="fa-solid fa-calendar fa-fw"></i>
             </span>
-            2023/12/14
+            2023/12/13
         </span>
         
-        <span class="category">
-            <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
-                <span class="icon">
-                    <i class="fa-solid fa-bookmark fa-fw"></i>
-                </span>
-                学习笔记
-            </a>
-        </span>
-        
-        
-        <span class="tags">
-            <span class="icon">
-                <i class="fa-solid fa-tags fa-fw"></i>
-            </span>
-            
-            
-            <span class="tag">
-                
-                <a href="/tags/JavaSE/" style="color: #ff7d73">JavaSE</a>
-            </span>
-            
-        </span>
         
     </div>
-    
-    <div class="content" v-pre>
-        <p>面向对象的思维导图、 String 的思维导图</p>
-<span id="more"></span>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <p>我の小破窝</p>
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        
+        
+    </div>
+    <a href="/Hello-%EF%BC%8C%E6%88%91%E3%81%AE%E5%B0%8F%E7%A0%B4%E7%AA%9D/" class="go-post">阅读全文</a>
+</div>
 
-<h3 id="面向的对象"><a href="#面向的对象" class="headerlink" title="面向的对象"></a>面向的对象</h3><p><img src="https://blog-zlw.oss-cn-beijing.aliyuncs.com/img/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1.png" alt="面向对象"></p>
-<h3 id="String"><a href="#String" class="headerlink" title="String"></a>String</h3><p><img src="https://blog-zlw.oss-cn-beijing.aliyuncs.com/img/String.png" alt="String"></p>
+
+        <div class="page-current">
+    
+    <a class="page-num" href="/">
+        <i class="fa-solid fa-caret-left fa-fw"></i>
+    </a>
+    <a class="page-num" href="/">1</a>
+    <span class="page-omit">...</span>
+    
+    <span class="current">2</span>
+    
+    
+    
+    
+</div>
 
     </div>
     
-    
-    
-    
-    
-    
+    <div id="home-card">
+        <div id="card-style">
+    <div id="card-div">
+        <div class="avatar">
+            <img src="/images/logo.jpg" alt="avatar" />
+        </div>
+        <div class="name">周洛薇</div>
+        <div class="description">
+            <p>爱好小矮脚，小姐姐</p>
+
+        </div>
+        
+        <div class="icon-links">
+            
+            <span class="icon-link">
+                <a target="_blank" rel="noopener" href="https://github.com/Hzertz776141/">
+                    <i
+                        class="fa-brands fa-github fa-fw"
+                    ></i>
+                </a>
+            </span>
+            
+            <span class="icon-link">
+                <a target="_blank" rel="noopener" href="https://space.bilibili.com/1611601454">
+                    <i
+                        class="fa-brands fa-bilibili fa-fw"
+                    ></i>
+                </a>
+            </span>
+            
+            <span class="icon-link">
+                <a target="_blank" rel="noopener" href="https://www.zhihu.com/people/54-83-94-13">
+                    <i
+                        class="fa-brands fa-zhihu fa-fw"
+                    ></i>
+                </a>
+            </span>
+            
+        </div>
+        
+        
+        <div class="friend-links">
+            
+            <div class="friend-link">
+                <a target="_blank" rel="noopener" href="https://tianzhentech.cn/">Tianzhen</a>
+            </div>
+            
+        </div>
+        
+    </div>
+</div>
+
+    </div>
     
 </div>
 
@@ -266,12 +343,6 @@
         
     </div>
     <script src="/js/main.js"></script>
-    
-    
-
-
-
-
     
     <script type="text/javascript">
     var OriginTitile=document.title,st;
