@@ -3,7 +3,7 @@
 <html lang="zh-CN">
 <head>
     <meta charset="utf-8" />
-    <title>Particlex主题中的代码块的异常问题 | 周洛薇の小破窝</title>
+    <title>GO的学习笔记2 | 周洛薇の小破窝</title>
     <meta name="author" content="周洛薇" />
     <meta name="description" content="周洛薇爱好小矮脚，小姐姐" />
     <meta name="keywords" content="生活" />
@@ -165,22 +165,22 @@
         <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
             <div class="article">
     <div>
-        <h1>Particlex主题中的代码块的异常问题</h1>
+        <h1>GO的学习笔记2</h1>
     </div>
     <div class="info">
         <span class="date">
             <span class="icon">
                 <i class="fa-solid fa-calendar fa-fw"></i>
             </span>
-            2023/12/16
+            2024/2/14
         </span>
         
         <span class="category">
-            <a href="/categories/%E5%89%8D%E7%AB%AF%E7%BD%91%E7%AB%99/">
+            <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
                 <span class="icon">
                     <i class="fa-solid fa-bookmark fa-fw"></i>
                 </span>
-                前端网站
+                学习笔记
             </a>
         </span>
         
@@ -193,12 +193,7 @@
             
             <span class="tag">
                 
-                <a href="/tags/hexo/" style="color: #00a596">hexo</a>
-            </span>
-            
-            <span class="tag">
-                
-                <a href="/tags/Particlex/" style="color: #ff7d73">Particlex</a>
+                <a href="/tags/GO%E5%9F%BA%E7%A1%80/" style="color: #00a596">GO基础</a>
             </span>
             
         </span>
@@ -206,14 +201,385 @@
     </div>
     
     <div class="content" v-pre>
-        <p>主题中的代码块的异常问题</p>
+        <p>GoLang的语言基础</p>
 <span id="more"></span>
 
-<h4 id="如果主题中出现了如下的异常"><a href="#如果主题中出现了如下的异常" class="headerlink" title="如果主题中出现了如下的异常"></a>如果主题中出现了如下的异常</h4><p><img src="https://blog-zlw.oss-cn-beijing.aliyuncs.com/img/fa3a1256ae3562e3bf31a8b18cc94f1c.png" alt="img"></p>
-<p>此问题的的出现是因为hexo的版本与主题不适配， 只需要降低hexo的版本就可以解决问题</p>
-<p>（顺带提一嘴我现在用的hexo的版本是6.3.0）</p>
-<h4 id="降低hexo版本之后代码块如下："><a href="#降低hexo版本之后代码块如下：" class="headerlink" title="降低hexo版本之后代码块如下："></a>降低hexo版本之后代码块如下：</h4><p><img src="https://blog-zlw.oss-cn-beijing.aliyuncs.com/img/image-20231216142458857.png" alt="image-20231216142458857"></p>
-<p>代码块异常问题就解决啦！！！</p>
+<h2 id="1输出"><a href="#1输出" class="headerlink" title="1输出"></a>1输出</h2><p>在终端将想要展示的数据显示出来，例如：欢迎登录、请输入用户名等。。。</p>
+<ul>
+<li>内置函数<ul>
+<li>print</li>
+<li>println</li>
+</ul>
+</li>
+<li>fmt包（推荐）<ul>
+<li>fmt.Print</li>
+<li>fmt.Println</li>
+</ul>
+</li>
+</ul>
+<p>扩展：进程里有 stdin&#x2F;stdout&#x2F;stderr 。</p>
+<pre><code class="go">package main
+
+import &quot;fmt&quot;
+
+func main() &#123;
+    // 基于内置函数（不推荐）
+    //print(&quot;好吃不过饺子 \n&quot;)
+    //println(&quot;好吃不过饺子&quot;)
+    // fmt包（推荐）
+    //fmt.Print(&quot;好吃不过饺子 \n&quot;)
+    //fmt.Println(&quot;好吃不过饺子&quot;)
+    //fmt.Println(&quot;我叫&quot;, &quot;zlw&quot;, &quot;我媳妇&quot;, &quot;是个&quot;, &quot;....&quot;)
+    //fmt.Println(&quot;我叫zlw我媳妇是个....&quot;)
+
+    // fmt包 扩展：格式化输出
+    // %s，占位符 &quot;文本&quot;
+    // %d，占位符 整数
+    // %f，占位符 小数（浮点数）
+    // %.2f，占位符 小数（保留小数点后2位，四舍五入）
+    // 百分比
+    fmt.Printf(&quot;老汉开着%s,去接%s的媳妇，多少钱一次？%d块。嫂子给打折吧，%.2f怎么样？小哥哥包你100%%满意&quot;, &quot;车&quot;, &quot;老男孩&quot;, 100, 3.889)
+&#125;
+</code></pre>
+<h2 id="2-注释"><a href="#2-注释" class="headerlink" title="2.注释"></a>2.注释</h2><ul>
+<li>单行注释， &#x2F;&#x2F;</li>
+<li>多行注释， &#x2F;* *&#x2F;</li>
+</ul>
+<p>快捷：ctrl + ?</p>
+<h2 id="3-初识数据类型"><a href="#3-初识数据类型" class="headerlink" title="3.初识数据类型"></a>3.初识数据类型</h2><ul>
+<li>整型，整数</li>
+<li>字符串，文本</li>
+<li>布尔型，真假</li>
+</ul>
+<pre><code class="go">package main
+
+import &quot;fmt&quot;
+
+func main() &#123;
+    // 整型
+    fmt.Println(666)
+    fmt.Println(6 + 9)
+    fmt.Println(6 - 9)
+    fmt.Println(6 * 9)
+    fmt.Println(16 / 9) // 商
+    fmt.Println(16 % 9) // 余数
+
+    // 字符串类型，特点：通过双引号
+    fmt.Println(&quot;zlw&quot;)
+    fmt.Println(&quot;钓鱼要掉刀鱼，刀鱼到岛上钓&quot;)
+    fmt.Println(&quot;zlw&quot; + &quot;3213&quot;)
+    //fmt.Println(&quot;zlw&quot; + 666)
+    fmt.Println(&quot;zlw&quot; + &quot;666&quot;)
+    // 对比
+    fmt.Println(&quot;1&quot; + &quot;2&quot;) // 结果：&quot;12&quot;
+    fmt.Println(1 + 2)     // 结果：3
+
+    // 布尔类型，真假
+    fmt.Println(1 &gt; 2) // false  假
+    fmt.Println(1 &lt; 2) // true   真
+    fmt.Println(1 == 2)
+    fmt.Println(1 &gt;= 2)
+    fmt.Println(&quot;zlw&quot; == &quot;&quot;)
+
+    // 超前
+    if 2 &gt; 1 &#123;
+        fmt.Println(&quot;hello GO!!!&quot;)
+    &#125; else &#123;
+        fmt.Println(&quot;hello&quot;)
+    &#125;
+
+&#125;
+</code></pre>
+<h2 id="4-变量"><a href="#4-变量" class="headerlink" title="4.变量"></a>4.变量</h2><p>4,1</p>
+<p>声明 + 赋值</p>
+<pre><code class="go">var sd string = &quot;zlw&quot;
+fmt.Println(sd)
+
+var age int = 73
+fmt.Println(age)
+
+var flag bool = true
+fmt.Println(flag)
+</code></pre>
+<p>先声明后赋值</p>
+<pre><code class="go">// 声明了一个字符类型变量 sd
+var sd string
+// 给sd变量赋值
+sd = &quot;zlw&quot;
+fmt.Println(sd)
+</code></pre>
+<h3 id="4-2-变量名要求"><a href="#4-2-变量名要求" class="headerlink" title="4.2 变量名要求"></a>4.2 变量名要求</h3><p>【要求】变量名必须只包含：字母、数字、下划线</p>
+<p>【要求】数字不能开头</p>
+<p>【要求】不能使用go语言内置的关键字</p>
+<pre><code>break、default、func、interface、select、case、defer、go、map、struct、chan、else、goto、package、switch、const、fallthrough、if、range、type、continue、for、import、return、var
+</code></pre>
+<ul>
+<li>建议<ul>
+<li>变量名见名知意：name&#x2F;age&#x2F;num ; v1、v2、v3</li>
+<li>驼峰式命名：myBossName &#x2F; startDate</li>
+</ul>
+</li>
+</ul>
+<h2 id="5-常量"><a href="#5-常量" class="headerlink" title="5.常量"></a>5.常量</h2><p>不可被修改的变量。</p>
+<pre><code class="go">package main
+
+import &quot;fmt&quot;
+
+func main() &#123;
+    // 定义变量
+    //var name string = &quot;武沛齐&quot;
+    //var name = &quot;武沛齐&quot;
+    name := &quot;武沛齐&quot;
+    name = &quot;alex&quot;
+    fmt.Println(name)
+
+    // 定义常量
+    //const age int = 98
+    const age = 98
+    fmt.Println(age)
+&#125;
+</code></pre>
+<h3 id="5-1-因式分解"><a href="#5-1-因式分解" class="headerlink" title="5.1 因式分解"></a>5.1 因式分解</h3><pre><code class="go">package main
+
+import &quot;fmt&quot;
+
+func main() &#123;
+    // 定义变量
+    //var name string = &quot;zlw&quot;
+    //var name = &quot;zlw&quot;
+    name := &quot;zlw&quot;
+    name = &quot;zlw&quot;
+    fmt.Println(name)
+
+    // 定义常量
+    //const age int = 98
+    const age = 98
+    fmt.Println(age)
+&#125;
+</code></pre>
+<h3 id="5-2-全局"><a href="#5-2-全局" class="headerlink" title="5.2 全局"></a>5.2 全局</h3><pre><code class="go">package main
+
+import &quot;fmt&quot;
+
+const Data = 999
+const (
+    pi     = 3.1415926
+    gender = &quot;男&quot;
+)
+
+func main() &#123;
+    // 定义变量
+    //var name string = &quot;zlw&quot;
+    //var name = &quot;zlw&quot;
+    name := &quot;zlw&quot;
+    name = &quot;周洛薇&quot;
+    fmt.Println(name)
+
+    // 定义常量
+    //const age int = 98
+    const age = 98
+    fmt.Println(age)
+
+    // 常量因式分解
+    const (
+        v1 = 123
+        v2 = 456
+        //pi = 9.9
+    )
+    fmt.Println(v1, v2, pi, gender)
+&#125;
+</code></pre>
+<h3 id="5-3-iota"><a href="#5-3-iota" class="headerlink" title="5.3 iota"></a>5.3 iota</h3><p>当做一个在声明常量时的一个计数器。</p>
+<pre><code class="go">package main
+
+const (
+    monday = iota + 1
+    tuesday
+    wednesday
+    thursday
+    friday
+    saturday
+    sunday
+)
+
+const (
+    n1 = iota
+    n2
+    n3
+)
+
+func main() &#123;
+
+    // iota
+    // 示例1
+    /*
+        const (
+            v1 = 1
+            v2 = 2
+            v3 = 3
+            v4 = 4
+            v5 = 5
+        )
+        fmt.Println(v1, v2, v3, v4, v5)
+    */
+
+    // 示例2
+    /*
+        const (
+            v1 = iota
+            v2
+            v3
+            v4
+            v5
+        )
+        fmt.Println(v1, v2, v3, v4, v5)
+    */
+
+    // 示例3
+    /*
+        const (
+            v1 = iota + 2
+            v2
+            v3
+            v4
+            v5
+        )
+        fmt.Println(v1, v2, v3, v4, v5)
+    */
+
+    // 示例4：
+    /*
+        const (
+            v1 = iota + 2
+            _
+            v2
+            v3
+            v4
+            v5
+        )
+        fmt.Println(v1, v2, v3, v4, v5)
+    */
+
+&#125;
+</code></pre>
+<h2 id="6-输入"><a href="#6-输入" class="headerlink" title="6.输入"></a>6.输入</h2><p>让用户输入数据，完成项目交互。</p>
+<ul>
+<li><p>fmt.Scan</p>
+</li>
+<li><p>fmt.Scanln</p>
+</li>
+<li><p>fmt.Scanf</p>
+</li>
+</ul>
+<pre><code class="go"> package main
+ 
+ import &quot;fmt&quot;
+ 
+ func main() &#123;
+     // 示例1：fmt.Scan
+     /*
+         var name string
+         fmt.Println(&quot;请输入用户名：&quot;)
+         fmt.Scan(&amp;name)
+         fmt.Printf(name)
+     */
+ 
+     // 示例2：fmt.Scan
+     var name string
+     var age int
+ 
+     fmt.Println(&quot;请输入用户名：&quot;)
+     // 当使用Scan时，会提示用户输入
+     // 用户输入完成之后，会得到两个值：count,用户输入了几个值；err，用输入错误则是错误信息
+     _, err := fmt.Scan(&amp;name, &amp;age)
+     if err == nil &#123;
+         fmt.Println(name, age)
+     &#125; else &#123;
+         fmt.Println(&quot;用户输入数据错误&quot;, err)
+     &#125;
+     // 特别说明：fmt.Scan 要求输入两个值，必须输入两个，否则他会一直等待。
+ &#125;
+ 
+</code></pre>
+<pre><code class="go">package main
+
+import &quot;fmt&quot;
+
+func main() &#123;
+    // 示例1：fmt.Scanln
+    /*
+        var name string
+        fmt.Print(&quot;请输入用户名：&quot;)
+        fmt.Scanln(&amp;name)
+        fmt.Printf(name)
+    */
+
+    // 示例2：fmt.Scanln
+
+    var name string
+    var age int
+    fmt.Print(&quot;请输入用户名：&quot;)
+    // 当使用Scanln时，会提示用户输入
+    // 用户输入完成之后，会得到两个值：count,用户输入了几个值；err，用输入错误则是错误信息
+    count, err := fmt.Scanln(&amp;name, &amp;age)
+    fmt.Println(count, err)
+    fmt.Println(name, age)
+
+    // 特别说明：fmt.Scanln 等待回车。
+&#125;
+</code></pre>
+<h2 id="7-条件语句"><a href="#7-条件语句" class="headerlink" title="7.条件语句"></a>7.条件语句</h2><h3 id="7-1-最基本"><a href="#7-1-最基本" class="headerlink" title="7.1 最基本"></a>7.1 最基本</h3><pre><code class="go">if 条件 &#123;
+    成立后，此代码块执行
+&#125;else&#123;
+    不成立，此代码块执行
+&#125;
+</code></pre>
+<pre><code class="go">if 条件 &#123;
+    成立后，此代码块执行
+&#125;
+</code></pre>
+<h3 id="7-2-多条件判断"><a href="#7-2-多条件判断" class="headerlink" title="7.2 多条件判断"></a>7.2 多条件判断</h3><pre><code class="go">if 条件A&#123;
+    ...
+&#125;else if 条件B&#123;
+    ...
+&#125;else if 条件C&#123;
+    ...
+&#125;else&#123;
+    ...
+&#125;
+</code></pre>
+<h3 id="7-3-嵌套"><a href="#7-3-嵌套" class="headerlink" title="7.3 嵌套"></a>7.3 嵌套</h3><pre><code class="go">package main
+
+import &quot;fmt&quot;
+
+func main() &#123;
+    fmt.Println(&quot;欢迎致电10086，1.话费相关；2.业务办理；3.人工服务。&quot;)
+
+    var number int
+    fmt.Scanln(&amp;number)
+
+    if number == 1 &#123;
+        fmt.Println(&quot;话费服务，1.交话费；2.查询。&quot;)
+        var n1 int
+        fmt.Scanln(&amp;n1)
+        if n1 == 1 &#123;
+            fmt.Println(&quot;缴话费啦&quot;)
+        &#125; else if n1 == 2 &#123;
+            fmt.Println(&quot;查话费了&quot;)
+        &#125; else &#123;
+            fmt.Println(&quot;输入错误&quot;)
+        &#125;
+    &#125; else if number == 2 &#123;
+        fmt.Println(&quot;业务办理&quot;)
+    &#125; else if number == 3 &#123;
+        fmt.Println(&quot;人工服务&quot;)
+    &#125; else &#123;
+        fmt.Println(&quot;输入错误&quot;)
+    &#125;
+    
+    // 建议：条件的嵌套不要太多
+&#125;
+</code></pre>
 
     </div>
     
