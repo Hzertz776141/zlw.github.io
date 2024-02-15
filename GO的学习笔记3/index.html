@@ -3,7 +3,7 @@
 <html lang="zh-CN">
 <head>
     <meta charset="utf-8" />
-    <title>Categories: 节日 | 周洛薇の小破窝</title>
+    <title>GO的学习笔记3 | 周洛薇の小破窝</title>
     <meta name="author" content="周洛薇" />
     <meta name="description" content="周洛薇爱好小矮脚，小姐姐" />
     <meta name="keywords" content="生活" />
@@ -32,6 +32,10 @@
 
 
 <script src="/js/lib/preview.js"></script>
+
+
+
+
 
 
 
@@ -159,25 +163,20 @@
 </transition>
 
         <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
-            <div id="archives">
-    
-    <div class="categories-tags">
-        
-        
-        
-        <span>
-            <a href="/categories/%E6%97%A5%E5%B8%B8/" style="background: #ff7d73">
-                <span class="icon">
-                    <i class="fa-solid fa-bookmark fa-fw"></i>
-                </span>
-                日常
-            </a>
+            <div class="article">
+    <div>
+        <h1>GO的学习笔记3</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2024/2/15
         </span>
         
-        
-        
-        <span>
-            <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" style="background: #ffa2c4">
+        <span class="category">
+            <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
                 <span class="icon">
                     <i class="fa-solid fa-bookmark fa-fw"></i>
                 </span>
@@ -186,54 +185,201 @@
         </span>
         
         
-        
-        <span>
-            <a href="/categories/%E5%89%8D%E7%AB%AF%E7%BD%91%E7%AB%99/" style="background: #03a9f4">
-                <span class="icon">
-                    <i class="fa-solid fa-bookmark fa-fw"></i>
-                </span>
-                前端网站
-            </a>
+        <span class="tags">
+            <span class="icon">
+                <i class="fa-solid fa-tags fa-fw"></i>
+            </span>
+            
+            
+            <span class="tag">
+                
+                <a href="/tags/GO%E5%9F%BA%E7%A1%80/" style="color: #ff7d73">GO基础</a>
+            </span>
+            
         </span>
-        
-        
-        
-        <span>
-            <a href="/categories/%E8%8A%82%E6%97%A5/" style="background: linear-gradient(120deg, #9abbf7 0%, #ffbbf4 100%)">
-                <span class="icon">
-                    <i class="fa-solid fa-bookmark fa-fw"></i>
-                </span>
-                节日
-            </a>
-        </span>
-        
-        
-        
         
     </div>
     
-    <div class="timeline">
-        <div class="timeline-tail"></div>
-        <div class="timeline-content">
-            <div class="item-time">2024/2/8</div>
-            <a href="/%E6%96%B0%E5%B9%B4%E5%BF%AB%E4%B9%90/">
-                <h3>新年快乐</h3>
-            </a>
-            <div class="info">
-                
-                <span class="category">
-                    <a href="/categories/%E6%97%A5%E5%B8%B8/">
-                        <span class="icon">
-                            <i class="fa-solid fa-bookmark fa-fw"></i>
-                        </span>
-                        日常
-                    </a>
-                </span>
-                
-                
-            </div>
-        </div>
+    <div class="content" v-pre>
+        <p>GoLang的语言基础</p>
+<span id="more"></span>
+
+<h2 id="1-switch语句"><a href="#1-switch语句" class="headerlink" title="1.switch语句"></a>1.switch语句</h2><pre><code class="go">package main
+
+import &quot;fmt&quot;
+
+func main() &#123;
+    //switch 1 + 1 &#123;
+    //case 1:
+    //	fmt.Println(&quot;等于1&quot;)
+    //case 2:
+    //	fmt.Println(&quot;等于2&quot;)
+    //case 3:
+    //	fmt.Println(&quot;等于3&quot;)
+    //default:
+    //	fmt.Println(&quot;都不满足&quot;)
+    //&#125;
+    //表达式
+    var age int
+    fmt.Scan(&amp;age)
+    switch age &#123;
+    case 1:
+        fmt.Println(&quot;等于1&quot;)
+    case 2:
+        fmt.Println(&quot;等于2&quot;)
+    case 3:
+        fmt.Println(&quot;等于3&quot;)
+    default:
+        fmt.Println(&quot;都不满足&quot;)
+    &#125;
+&#125;
+</code></pre>
+<h2 id="2-for循环"><a href="#2-for循环" class="headerlink" title="2.for循环"></a>2.for循环</h2><h3 id="2-1-死循环"><a href="#2-1-死循环" class="headerlink" title="2.1 死循环"></a>2.1 死循环</h3><pre><code class="go">for &#123;
+    ...
+&#125;
+</code></pre>
+<h3 id="2-2-布尔值条件"><a href="#2-2-布尔值条件" class="headerlink" title="2.2 布尔值条件"></a>2.2 布尔值条件</h3><pre><code class="go">for 1&gt;2 &#123;
+    ...
+&#125;
+</code></pre>
+<pre><code class="go">flag := true
+for flag &#123;
+    
+&#125;
+</code></pre>
+<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><pre><code class="go">package main
+
+import (
+    &quot;fmt&quot;
+    &quot;time&quot;
+)
+
+func main() &#123;
+    //示例1 死循环
+    //fmt.Println(&quot;start&quot;)
+    //for &#123;
+    //	fmt.Println(&quot;zlw love cl&quot;)
+    //	time.Sleep(time.Second * 1)
+    //&#125;
+    //fmt.Println(&quot;end&quot;)
+    //示例2
+    //fmt.Println(&quot;start&quot;)
+    //for 2 &gt; 1 &#123;
+    //	fmt.Println(&quot;zlw love cl&quot;)
+    //	time.Sleep(time.Second * 1)
+    //&#125;
+    //fmt.Println(&quot;end&quot;)
+    //示例3
+    //fmt.Println(&quot;start&quot;)
+    //number := 1
+    //for number &lt; 5 &#123;
+    //	fmt.Println(&quot;zlw love cl&quot;)
+    //	time.Sleep(time.Second * 1)
+    //	number = 10
+    //&#125;
+    //fmt.Println(&quot;end&quot;)
+    //示例4
+    //fmt.Println(&quot;start&quot;)
+    //number := 1
+    //for number &lt; 5 &#123;
+    //	fmt.Println(&quot;zlw love cl&quot;)
+    //	time.Sleep(time.Second * 1)
+    //	number ++
+    //&#125;
+    //fmt.Println(&quot;end&quot;)
+    //示例5
+    fmt.Println(&quot;start&quot;)
+    flag := true
+    for flag &#123;
+        fmt.Println(&quot;zlw love cl&quot;)
+        time.Sleep(time.Second * 1)
+    &#125;
+    fmt.Println(&quot;end&quot;)
+&#125;
+</code></pre>
+<h3 id="2-3-变量-条件"><a href="#2-3-变量-条件" class="headerlink" title="2.3 变量&amp;条件"></a>2.3 变量&amp;条件</h3><pre><code class="go">for i := 1; i &lt; 10; &#123;
+    fmt.Println(&quot;zlw love cl&quot;)
+    i = i + 1
+&#125;
+</code></pre>
+<h3 id="2-4-变量-条件-变量赋值"><a href="#2-4-变量-条件-变量赋值" class="headerlink" title="2.4 变量&amp;条件&amp;变量赋值"></a>2.4 变量&amp;条件&amp;变量赋值</h3><pre><code class="go">for i := 1; i &lt; 10; i++ &#123;
+    fmt.Println(&quot;zlw love cl&quot;)
+&#125;
+</code></pre>
+<pre><code class="go">for i := 1; i &lt; 10; i = i + 2 &#123;
+    fmt.Println(&quot;zlw love cl&quot;)
+&#125;
+</code></pre>
+<h3 id="2-5-continue"><a href="#2-5-continue" class="headerlink" title="2.5 continue"></a>2.5 continue</h3><p>在for循环中，当循环遇到continue关键字时，会停止当前循环，开始下一次循环。</p>
+<pre><code class="go">package main
+
+import &quot;fmt&quot;
+
+func Continue() &#123;
+    for &#123;
+        fmt.Println(&quot;zlw love cl&quot;)
+        continue
+        fmt.Println(&quot;cl love zlw too&quot;)
+    &#125;
+&#125;
+</code></pre>
+<h3 id="2-6-break"><a href="#2-6-break" class="headerlink" title="2.6 break"></a>2.6 break</h3><p>在for循环中时，循环中一旦遇到break，跳出循环。</p>
+<pre><code class="go">package main
+
+import &quot;fmt&quot;
+
+func Break() &#123;
+    for &#123;
+        fmt.Println(&quot;zlw love cl&quot;)
+        break
+        fmt.Println(&quot;cl love zlw too&quot;)
+    &#125;
+&#125;
+</code></pre>
+<h2 id="3-goto语句"><a href="#3-goto语句" class="headerlink" title="3.goto语句"></a>3.goto语句</h2><p>跳跃到指定的行，然后向下执行代码。</p>
+<pre><code class="go">package main
+
+import &quot;fmt&quot;
+
+func main() &#123;
+    var name string
+    fmt.Scan(&amp;name)
+
+    if name == &quot;zlw&quot; &#123;
+        //VIP
+        goto VIP
+    &#125; else if name == &quot;cl&quot; &#123;
+        goto SVIP
+    &#125;
+    fmt.Println(&quot;eat Dog Food!!&quot;)
+VIP:
+    fmt.Println(&quot;love cl&quot;)
+SVIP:
+    fmt.Println(&quot;love zlw&quot;)
+&#125;
+</code></pre>
+<h2 id="4-字符串格式化"><a href="#4-字符串格式化" class="headerlink" title="4.字符串格式化"></a>4.字符串格式化</h2><p>将数据格式化成为特定格式的字符串时，可以使用字符串格式化。</p>
+<pre><code class="go">package main
+
+import &quot;fmt&quot;
+
+func main() &#123;
+    var name, add, act string
+    fmt.Scan(&amp;name, &amp;add, &amp;act)
+
+    result := fmt.Sprintf(&quot;%s在%s在%s&quot;, name, add, act)
+
+    fmt.Println(result)
+&#125;
+</code></pre>
+
     </div>
+    
+    
+    
+    
+    
+    
     
 </div>
 
@@ -286,6 +432,12 @@
         
     </div>
     <script src="/js/main.js"></script>
+    
+    
+
+
+
+
     
     <script type="text/javascript">
     var OriginTitile=document.title,st;
